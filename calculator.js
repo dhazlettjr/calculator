@@ -10,6 +10,18 @@ function addition (num,num1){
     return num + num1;
 }
 
+function subtraction (num,num1){
+    return num - num1;
+}
+
+function multiply (num,num1){
+    return num * num1;
+}
+
+function division (num,num1){
+    return num / num1;
+}
+
 function calculate (num, num1, cal){
     return cal(num,num1);
 }
@@ -24,6 +36,24 @@ function printToDOM(value) {
 
 document.getElementById("add").addEventListener("click", function () {
     let answer = calculate(+input.value,+input1.value, addition);
+    //document.getElementById("output").innerHTML = input.value + input1.value;
+    printToDOM(answer);
+});
+
+document.getElementById("sub").addEventListener("click", function () {
+    let answer = calculate(+input.value,+input1.value, subtraction);
+    //document.getElementById("output").innerHTML = input.value + input1.value;
+    printToDOM(answer);
+});
+
+document.getElementById("mult").addEventListener("click", function () {
+    let answer = calculate(+input.value,+input1.value, multiply);
+    //document.getElementById("output").innerHTML = input.value + input1.value;
+    printToDOM(answer);
+});
+
+document.getElementById("divide").addEventListener("click", function () {
+    let answer = calculate(+input.value,+input1.value, division);
     //document.getElementById("output").innerHTML = input.value + input1.value;
     printToDOM(answer);
 });
